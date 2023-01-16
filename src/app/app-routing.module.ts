@@ -3,7 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { FactsComponentComponent } from "./components/facts-component/facts-component.component";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
-import { StartComponent } from "./components/starti-component/start.component";
+import { StartComponent } from "./components/start-component/start.component";
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/facts/1', pathMatch: 'full'},
