@@ -1,0 +1,29 @@
+<div [routerLink]="['/facts', id]">
+    <div>
+        <div class="col-xs-12 col-md-6 col-md-offset-3">
+          <a
+            *ngIf="loadedFacts.current_page > 1" 
+            [routerLink] = "['/facts/:id']"
+            (click)="onPrevious()">Previous Page</a>
+          <a class="next" 
+            *ngIf="loadedFacts.current_page < loadedFacts.last_page"
+            [routerLink] = "['/facts/:id']" 
+            (click)="onNext()" style="float: right;">Next Page</a>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-offset-3">
+          <p>Page: {{ loadedFacts.current_page }}</p>
+          <ul class="list-group" *ngIf="loadedFacts.data.length > 0">
+            <li class="list-group-item" *ngFor="let fact of loadedFacts.data; index as i">
+              <span class="badge" 
+                href="#!" (click)="onRemoveFact(i)">✘
+              </span>
+              <p><b>Fact:</b> {{ fact.fact }}</p>
+              <p><b>Length:</b> {{ fact.length }}</p>
+            </li>
+          </ul>
+          <p *ngIf="isFetching">Loading...</p>
+        </div>
+    </div>
+</div>

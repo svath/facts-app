@@ -1,0 +1,26 @@
+.container {
+    margin-top: 30px;
+  }
+  
+  .row {
+    margin: 20px 0;
+  }
+  
+  .badge {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .badge:hover{
+    background-color: darkred;
+    color: whitesmoke;
+  }
+  
+  .badge:active{
+    background-color: red;
+  }
+
+  .next {
+    float: right;
+  }
